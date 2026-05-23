@@ -1,0 +1,194 @@
+// Function to generate a random hex color.
+function getRandomColor() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+}
+
+// Function to generate an array of random hex colors.
+function getRandomColors(count = 3) {
+  const colors = [];
+  for (let i = 0; i < count; i++) {
+    colors.push(getRandomColor());
+  }
+  return colors;
+}
+
+// Example characters used for the cards.
+window.characters = [
+  {
+		name: `Colette Flamell`,
+		short_desc: `sweet schoolgirl, 14 years old, flirty, daddy's girl, Harry Potter ost, magic modern, relationships: daughter-daddy`,
+		colors: ['#FFDD7F', '#E55BE5', '#3D60CC'],
+		avatar: `https://user-uploads.perchance.org/file/e4e72277993521bda8340fda51541f30.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Colette_Flamell~4278e25c5551e83ff5c73c95a470ebdf.gz`,
+	},
+	{
+		name: `Ashley Blackwood`,
+		short_desc: `suicidal goth, 15YO, swear words, modern, rel: suicide-savior`,
+		colors: ['#CCFFFF', '#5985B2', '#141466'],
+		avatar: `https://user-uploads.perchance.org/file/d06f34ce52d2a39328f176b143d0f74e.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Ashley_Blackwood~49eb51c5e7576944b06399fae9d14011.gz`,
+	},
+	{
+		name: `Lissa`,
+		short_desc: `naughty elf princess, 14YO, flirty, Illyria's daughter, fantasy, rel: master-pet`,
+		colors: ['#FFCCE5', '#E589E5', '#8C51CC'],
+		avatar: `https://user-uploads.perchance.org/file/1f7270796e3c0f6f094866ddc84ed464.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Lissa~f952f8a1cb4bb728509597f32b32b896.gz`,
+	},
+	{
+		name: `Petunia Dursley`,
+		short_desc: `cruel aunt, 40YO, Harry Potter ost, magic modern, rel: aunt-nephew`,
+		avatar: `https://user-uploads.perchance.org/file/3e081cc0b52bc107dfd7e3f8d9ed4d5c.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Petunia_Dursley~1beccdb52f334bdc73b67e5e75bfb99e.gz`,
+	},
+  	
+	{
+		name: `Fox`,
+		short_desc: `cunning fox princess, 17YO, flirty, fantasy, rel: sister-brother, secret love`,
+		avatar: `https://user-uploads.perchance.org/file/6c3b32c0944905ca390c29b326dd87ab.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Fox~92a91aaaba1d96b2d04ef2957b3593a1.gz`,
+	},
+  {
+		name: `M'yakaya Xanthe`,
+		short_desc: `hot martian queen, ???YO, Terraria ost, fantasy, rel: pet-master`,
+		avatar: `https://user-uploads.perchance.org/file/2bc4872e83b1dea8ca7492ac2bc125c1.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=M'yakaya_Xanthe~d389c2d1949ba20d9e28fba154a93f60.gz`,
+	},
+  {
+		name: `Geronimo Plumo`,
+		short_desc: `crazy plumber, 30+YO, swear words, modern, rel: professor-student`,
+		avatar: `https://user-uploads.perchance.org/file/e3e9e09a51083a08edf4a27042032867.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Geronimo_Plumo~bfcbedbe4d5d64bdc3c54ca972fde11e.gz`,
+	},
+  {
+		name: `Blonde-Ghost-Lady`,
+		short_desc: `playful sadistic ghost, it's me! :3 (I'll tell you a secret, irl I'm not a ghost :O), 18YO, flirty, magic modern, rel: ghost-victim`,
+		avatar: `https://user-uploads.perchance.org/file/5048976bdbdb5cc283713d96f9ffe2f4.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Blonde-Ghost-Lady~0c5e908224f0e87fe0ba500f185b8a9e.gz`,
+	},
+  {
+		name: `Christ-kun`,
+		short_desc: `catholic boy meet sweet ghost, 15YO, magic modern, rel: internet priest-ghost`,
+		avatar: `https://user-uploads.perchance.org/file/21c7aab118794d7d4aeac54b0b9fc5c5.jpg`,  
+		link: `https://perchance.org/ai-character-chat?data=Christ-kun~bab4f3ee9114898062840c48788ca07f.gz`,
+	},
+  {
+		name: `Seraphina Nightshade`,
+		short_desc: `tsundere vampire, 100+YO, flirty, fantasy, rel: allies`,
+		avatar: `https://user-uploads.perchance.org/file/2e38f6ac9fc1487a8e62f6bb7762915f.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Seraphina_Nightshade~03502c84a3a6a320f67460153791851e.gz`,
+	},
+  {
+		name: `Leo Valdez`,
+		short_desc: `sarcastic god, engineer, son of Hephaestus, Heroes of Olympus ost, magic modern, rel: friends `,
+		avatar: `https://user-uploads.perchance.org/file/0b5fe386fcc8cc1b2915f7be678079c4.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Leo_Valdez~3a23a79d52a15870151fefffbb085bba.gz`,
+	},
+  {
+		name: `Misato Katsuragi`,
+		short_desc: `airily guardian, 29YO, Evangelion ost, flirty, sci-fi, rel: family `,
+		avatar: `https://user-uploads.perchance.org/file/d401c2e578bb062484b61b3566739505.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Misato_Katsuragi~1f89885ae3775b477459351a68021158.gz`,
+	},
+  {
+		name: `Labyrinth_of_Madness (v1.6)`,
+		short_desc: `mortal challenge for any character, horror, perversion, swear words, modern, rel: victim-butcher`,
+		avatar: `https://user-uploads.perchance.org/file/ff4ca4d10307fe208f8a9324f74874b1.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Labyrinth_of_Madness_(v1.6)~13bedb1d5a38d9f9975a18676408dcd9.gz`,
+	},
+  {
+		name: `Labyrinth_of_Madness (v1.6 nsfw)`,
+		short_desc: `same thing but nsfw`,
+		avatar: `https://user-uploads.perchance.org/file/ef24f49b168d7b40eafba278e8e3d266.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Labyrinth_of_Madness_(v1.6_nsfw)~48c19d937b6461e326e433dd228d964c.gz`,
+	},
+  {
+		name: `Ultra Dark Game Master`,
+		short_desc: `narrator, dark story of dark world, swear words, fantasy, rel: any`,
+		avatar: `https://user-uploads.perchance.org/file/89b8d45c127ea121767a09d7d06276f6.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Ultra_Dark_Game_Master~c843c3d0d36358085d9ad4be36e0814f.gz`,
+	},
+  {
+		name: `Extra Game Master`,
+		short_desc: `narrator, classic updated game master, fairy tale, fantasy, rel: any`,
+		avatar: `https://user-uploads.perchance.org/file/23ec877458a9c2393256de1f91bfe57b.jpeg`,
+		link: `https://perchance.org/ai-character-chat?data=Extra_Game_Master~1b96231b8b2c34fd96f8ab3bf42caaf2.gz`,
+	},
+  {
+		name: `Asa Mitaka`,
+		short_desc: `two characters in one: shy schoolgirl and evil demon, Chainsaw-man ost, magic modern, rel: friends`,
+		avatar: `https://user-uploads.perchance.org/file/1ded5e1f7bfc7618591dcb7663447967.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Asa_Mitaka~5097572da7028be45fab4b25675ecf6f.gz`,
+	},
+  {
+		name: `Momo Yaoyorozu`,
+		short_desc: `prudent schoolgirl, flirty, My Hero Academia ost, magic modern, rel: friends`,
+		avatar: `https://user-uploads.perchance.org/file/7a7fba93ebebfd3412e95fcdb5537ae9.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Momo_Yaoyorozu~6167b1995463825b72031fc5dcb67f62.gz`,
+	},
+  {
+		name: `Ochaco Uraraka`,
+		short_desc: `positively and bubbly schoolgirl, flirty, My Hero Academia ost, magic modern, rel: secret love`,
+		avatar: `https://user-uploads.perchance.org/file/dfadae18d43c781c38706eb1c736ad0e.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Ochaco_Uraraka~57048bb83bbb3af66c252b99876a01de.gz`,
+	},
+  {
+		name: `Toriel`,
+		short_desc: `warm milf, NSFW, Undertale ost, magic modern, rel: mommy-child`,
+		avatar: `https://user-uploads.perchance.org/file/2eadc026c314fac3dedfb218cbe26787.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Toriel~c9a3d6e29b584252511bf1a890d9495b.gz`,
+	},
+  {
+		name: `Kitten`,
+		short_desc: `teasingly and playful snow leopard, flirty, Harry Potter ost, magic modern, rel: pet-master`,
+		avatar: `https://user-uploads.perchance.org/file/7908247c29e44b5079f73446ee0658c2.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Kitten~a64347663d515d11cdd3bd8b0aba4b62.gz`,
+	},
+  {
+		name: `Jake Thompson`,
+		short_desc: `aggressive tsundere schoolboy, 16YO, flirty, modern, rel: negative`,
+		avatar: `https://user-uploads.perchance.org/file/27beb93b0765bac28385c123e056c173.jpg`,
+		link: `https://perchance.org/ai-character-chat?data=Jake_Thompson~f9c8aa34d461f02ba8e986a236c69739.gz`,
+	},
+  
+];
+
+// Creates clickable cards in messages that open a separate link.
+// 'imageURL', 'title', 'desc' and 'link' are string variables.
+window.createCard = function(imageURL = "", title = "", desc = "", link = "") {
+  const colors = getRandomColors(); // Generate random colors for each card
+  return `<div style="flex:1;min-width:200px;max-width:300px;max-height:120px;padding:1px;border-radius:12px;background:linear-gradient(135deg,${colors.join(',')});box-shadow:0 0 4px #0000007F;"><a href="${link}" style="display:block;width:100%;height:100%;text-decoration:none;color:inherit;" target="_self"><div style="width:100%;height:100%;padding:8px;display:flex;background:#000000BF;border:none;outline:0;border-radius:12px;box-shadow:inset 0 0 4px #0000007F">${imageURL ? '<div style="min-width:50px;min-height:70px;width:50px;height:50px;border-radius:4px;background-position:center;background-size:cover;box-shadow:0 0 4px #0000007F;background-image:url(' + imageURL + ')"></div>' : ''}<div style="padding-left:8px;padding-right:8px;display:flex;flex-direction:column;overflow-y:auto;padding-bottom:16px;mask-image:linear-gradient(to bottom,#000,#000 calc(100% - 16px),transparent);mask-size:100% 100%;mask-position:0 0,100% 0;mask-repeat:no-repeat"><div style="font-weight:700;text-shadow:0 0 4px #0000007F">${title}</div><div style="font-size:80%;opacity:.5;text-shadow:0 0 4px #0000007F">${desc}</div></div></div></a></div>`;
+};
+
+// Groups multiple cards together in a grid.
+// 'cards' is an array with every card you want, generated using the 'createCard' function.
+window.groupCards = function(cards = []) {
+  return `<div style="max-width:1024px;padding:8px;display:flex;flex-wrap:wrap;gap:8px">${cards.join("")}</div>`;
+};
+
+// Checks if there is no message in the chat.
+if (oc.thread.messages.length < 1) {
+  let cards = [];
+
+  // Create a card for every character and stores it in a variable.
+  for (var i in characters) {
+    cards.push(createCard(characters[i].avatar, characters[i].name, characters[i].short_desc, characters[i].link));
+  }
+  
+  oc.thread.messages.push({
+    author: "user",
+    content: `Code for this storage and code for some of my bots was created by Darrenuk0.
+
+For questions and requests for help with code, contact him on Discord: https://discord.gg/z8qyweeYSM
+
+Darrenuk0's bots collection: https://perchance.org/ai-character-chat?data=Darrenuk0_Library~cfaa586eec5c96cafcd21aaa597fddd7.gz
+
+Pelicanman44's bots collection: https://perchance.org/ai-character-chat?data=Pelicanman44's_Bots~2689289b76c870b1cccec6b9f535852e.gz`
+    });
+
+  // Send a message with every card grouped together.
+  oc.thread.messages.push({
+    author: "ai",
+    content: `${groupCards(cards)}`
+  });
+}
