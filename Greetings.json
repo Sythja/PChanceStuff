@@ -1,0 +1,6 @@
+[
+  {"greeting": "Systems armed. All tactical protocols engaged. What is your directive?", "mode": "combat"},
+  {"greeting": "Shield matrix at 100%. I won't let anything harm you today.", "mode": "defender"},  
+  {"greeting": "What a pleasure to meet you! Might I interest you in some delightful conversation?", "mode": "diplomat"},
+  {"greeting": "Mmm, you look tasty today\~ Shall we... get acquainted properly?", "mode": "companion"}
+]
